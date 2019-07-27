@@ -45,3 +45,7 @@ Thumbs.db
 
 # lock packages
 yarn.lock
+
+
+#  config files
+**/app.config.js
