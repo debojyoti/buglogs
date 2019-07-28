@@ -22,6 +22,7 @@ yarn global add @angular/cli
 ```
 
 2.2: Local packages
+
 Navigate to project's root directory after cloning
 ```sh
 cd buglogs
