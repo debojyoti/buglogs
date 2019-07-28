@@ -37,11 +37,13 @@ yarn
 
 #### 3: Add Config data
 
-3.1: Create a file named `app.config.js` in `src/app` directory
+3.1: Create file `app.config.js` in `src/app` directory
+
 3.2: Copy template content form `src/app/app.config.sample.js` and update with real values
 
-3.3: Create a file named `config.js` in `functions/` directory
-3.2: Copy template content form `functions/config.sample.js` and update with real values
+3.3: Create file `config.js` in `functions/` directory
+
+3.4: Copy template content form `functions/config.sample.js` and update with real values
 
 #### 4: Run locally
 ```sh
