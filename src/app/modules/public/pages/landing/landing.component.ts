@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { HttpCallsService } from './../../../services/http-calls.service';
-import { AuthManagerService } from './../../../services/auth-manager.service';
+import { HttpCallsService } from './../../../../services/http-calls.service';
+import { AuthManagerService } from '../../../../services/auth-manager.service';
 
 @Component({
   selector: 'app-landing',
