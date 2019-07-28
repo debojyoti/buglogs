@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { AngularFireAuth } from '@angular/fire/auth';
-import { auth } from 'firebase/app';
+import { HttpCallsService } from './../../../services/http-calls.service';
+import { AuthManagerService } from './../../../services/auth-manager.service';
 
 @Component({
   selector: 'app-landing',
@@ -10,22 +10,19 @@ import { auth } from 'firebase/app';
 export class LandingComponent implements OnInit {
 
   constructor(
-    private afAuth: AngularFireAuth
+    private httpCallsService: HttpCallsService,
+    private authManagerService: AuthManagerService
   ) { }
 
   ngOnInit() { }
 
 
   _loginWithGoogle() {
-    this.afAuth.auth.signInWithPopup(new auth.GoogleAuthProvider())
-      .then(googleResponse => {
-        // Successfully logged in
-        console.log(googleResponse);
-        // Add your logic here
-
+    this.authManagerService.loginWithGoogle()
+      .then(res => {
+        console.log('Logged in successfully!');
       }).catch(err => {
-        // Login error
-        console.log(err);
-      });
+        
+      })
   }
 }

@@ -48,4 +48,4 @@ yarn.lock
 
 
 #  config files
-**/app.config.js
+**/*config.js
