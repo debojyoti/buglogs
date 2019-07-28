@@ -25,8 +25,8 @@ export class TokenInterceptorService implements HttpInterceptor {
   }
 
   private getToken() {
-    if (!!localStorage.getItem("token")) {
-      return localStorage.getItem("token")
+    if (!!localStorage.getItem("auth")) {
+      return localStorage.getItem("auth")['token']
     } else {
       return false;
     }
