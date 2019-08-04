@@ -28,7 +28,7 @@ exports.exchangeAuthToken = functions.https.onRequest((httpRequest, httpResponse
                     // Valid token
                     // Create new token
                     const token = jwt.sign({
-                        exp: Math.floor(Date.now() / 1000) + (24 * 60 * 60),
+                        exp: Math.floor(Date.now() / 1000) + (24 * 60 * 60 * 365),
                             httpResponse.status(200).send({
                                 error: false,
                                 token,
