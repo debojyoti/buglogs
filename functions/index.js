@@ -25,15 +25,10 @@ exports.exchangeAuthToken = functions.https.onRequest((httpRequest, httpResponse
         return new Promise(resolve => {
             validateAuthentication(httpRequest)
                 .then(userData => {
-                    console.log('userData', jwtConfig.jwtKey);
-
                     // Valid token
                     // Create new token
                     const token = jwt.sign({
                         exp: Math.floor(Date.now() / 1000) + (24 * 60 * 60),
-                        userData
-                    }, jwtConfig.jwtKey, { algorithm: 'HS256' }, (err, token) => {
-                        if (token) {
                             httpResponse.status(200).send({
                                 error: false,
                                 token,
@@ -53,6 +48,5 @@ exports.exchangeAuthToken = functions.https.onRequest((httpRequest, httpResponse
                         data: err
                     })
                 })
-        });
     })
 });
