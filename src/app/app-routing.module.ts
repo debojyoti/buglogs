@@ -3,10 +3,10 @@ import { Routes, RouterModule } from '@angular/router';
 
 const routes: Routes = [{
   path: 'home',
-  loadChildren: () => import('./modules/public/public.module').then(mod => mod.PublicModule)
+  loadChildren: './modules/public/public.module#PublicModule'
 }, {
   path: 'mylogs',
-  loadChildren: () => import('./modules/users/users.module').then(mod => mod.UsersModule)
+  loadChildren: './modules/users/users.module#UsersModule'
 }, {
   path: '**',
   redirectTo: '/home'

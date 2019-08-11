@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { AngularFireModule } from '@angular/fire';
-import { AngularFireAuth } from '@angular/fire/auth';
+import { AngularFireAuthModule } from '@angular/fire/auth';
 import { firebaseConfig } from '../../app.config';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { TokenInterceptorService } from '../../interceptors/token-interceptor.service';
@@ -14,10 +14,10 @@ import { AuthManagerService } from './../../services/auth-manager.service';
   imports: [
     CommonModule,
     AngularFireModule.initializeApp(firebaseConfig),
-    HttpClientModule
+    HttpClientModule,
+    AngularFireAuthModule
   ],
   providers: [
-    AngularFireAuth,
     TokenInterceptorService, 
     HttpCallsService,
     AuthManagerService, 

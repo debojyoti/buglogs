@@ -1,5 +1,14 @@
 {
   "projects": {
     "default": "buglogs-25829"
+  },
+  "targets": {
+    "buglogs-25829": {
+      "hosting": {
+        "buglogs": [
+          "dist/buglogs/"
+        ]
+      }
+    }
   }
 }

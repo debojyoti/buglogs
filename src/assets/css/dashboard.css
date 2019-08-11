@@ -1,0 +1,80 @@
+body {
+    padding: 0px;
+    margin: 0px; }
+  
+  * {
+    transition: 0.3s !important; }
+  
+  #body-inner-wrapper {
+    min-height: 100vh;
+    position: relative; }
+  
+  .hidden {
+    display: none !important; }
+  
+  #table-wrapper {
+    margin-top: 60px;
+    background-color: white;
+    padding: 20px; }
+    #table-wrapper thead {
+      background-color: #4B71DD;
+      color: white; }
+    #table-wrapper table {
+      margin-top: 20px; }
+  
+  #table-header-action-bar {
+    min-height: 50px; }
+  
+  #table-search {
+    width: 100%;
+    border-radius: 5px;
+    border: 2px solid #4B71DD;
+    padding-left: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    color: #6b6b6b; }
+  
+  @media screen and (max-width: 768px) {
+    .hide-on-small {
+      display: none; } }
+  
+  .tr-del-btn {
+    background: transparent;
+    border: none; }
+  
+  #sidebar-create-new-button-wrapper {
+    margin: 15px 20px;
+    margin-top: 95px;
+    margin-bottom: 25px;
+    text-align: left; }
+    #sidebar-create-new-button-wrapper button {
+      background-color: white;
+      border: none;
+      border-radius: 18px;
+      padding: 9px 31px;
+      font-size: 12px;
+      font-weight: 500;
+      box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.2); }
+      @media screen and (max-width: 768px) {
+        #sidebar-create-new-button-wrapper button {
+          font-size: 22px;
+          padding: 9px 15px 9px 24px; } }
+    @media screen and (max-width: 768px) {
+      #sidebar-create-new-button-wrapper {
+        margin: 15px 15px;
+        margin-top: 95px; } }
+    #sidebar-create-new-button-wrapper button:hover {
+      box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2); }
+  
+  #sidebarToggle-wrapper {
+    margin-top: 280px; }
+  
+  #pagination-wrapper {
+    background-color: red;
+    width: 100%;
+    position: relative;
+    text-align: right; }
+    #pagination-wrapper nav {
+      position: absolute;
+      right: 0; }
+  
