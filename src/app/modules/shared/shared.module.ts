@@ -8,6 +8,7 @@ import { TokenInterceptorService } from '../../interceptors/token-interceptor.se
 import { HttpCallsService } from './../../services/http-calls.service';
 import { ConnectorService } from './../../services/connector.service';
 import { AuthManagerService } from './../../services/auth-manager.service';
+import { FullScreenLoaderComponent } from './full-screen-loader/full-screen-loader.component';
 
 @NgModule({
   declarations: [],
