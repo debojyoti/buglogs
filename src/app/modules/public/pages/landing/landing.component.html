@@ -1,12 +1,11 @@
 
-<full-screen-loader></full-screen-loader>
 <div class="container-fluid" id="header-wrapper">
   <div class="row">
     <div class="col-4">
       <h3>Buglogs</h3>
     </div>
     <div class="col-8 text-right visible-on-small small-login-btn-wrapper">
-      <button id="g-login-btn"><span>G</span> Login</button>
+      <button id="g-login-btn" (click)="_loginWithGoogle()"><span>G</span> Login</button>
       <!-- <div id="header-user-info-wrapper">
         <div id="header-user-icon-circular">DS</div>
         <div id="header-acc-label">My Posts</div>
@@ -16,7 +15,7 @@
       <input placeholder="Search Posts" /><button>Search</button>
     </div>
     <div class="col-lg-2 hide-on-small">
-      <button id="g-login-btn"><span><i class="fab fa-google"></i></span> Login</button>
+      <button id="g-login-btn"  (click)="_loginWithGoogle()"><span><i class="fab fa-google"></i></span> Login</button>
       <!-- <div id="header-user-info-wrapper">
         <div id="header-user-icon-circular">DS</div>
         <div id="header-acc-label">My Posts</div>
@@ -35,7 +34,7 @@
         Start logging them down <br />using buglogs
       </p>
       <div id="landing-get-started-button-wrapper">
-        <button>
+        <button  (click)="_loginWithGoogle()">
           <span>Get started for free </span>
           <span><i class="fas fa-arrow-right"></i></span>
         </button>

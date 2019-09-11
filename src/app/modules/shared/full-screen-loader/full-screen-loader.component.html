@@ -1,4 +1,4 @@
-<div id="loader-wrapper">
+<div id="loader-wrapper" *ngIf="loaderProperties && loaderProperties.isVisible">
   <div class="lds-ring"><div></div><div></div><div></div><div></div></div>
-  <p>Logging you in</p>
+  <p>{{ loaderProperties.loaderText }}</p>
 </div>

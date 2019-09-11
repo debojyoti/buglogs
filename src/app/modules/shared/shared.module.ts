@@ -9,14 +9,18 @@ import { HttpCallsService } from './../../services/http-calls.service';
 import { ConnectorService } from './../../services/connector.service';
 import { AuthManagerService } from './../../services/auth-manager.service';
 import { FullScreenLoaderComponent } from './full-screen-loader/full-screen-loader.component';
+import { FullScreenLoaderService } from './../../services/full-screen-loader.service';
+import { ToastrModule } from 'ngx-toastr';
+
 
 @NgModule({
-  declarations: [],
-  imports: [
+  declarations: [FullScreenLoaderComponent],
+  imports: [  
     CommonModule,
     AngularFireModule.initializeApp(firebaseConfig),
     HttpClientModule,
-    AngularFireAuthModule
+    AngularFireAuthModule,
+    ToastrModule.forRoot()
   ],
   providers: [
     TokenInterceptorService, 
@@ -28,6 +32,9 @@ import { FullScreenLoaderComponent } from './full-screen-loader/full-screen-load
       useClass: TokenInterceptorService,
       multi: true
     }
+  ],
+  exports: [
+    FullScreenLoaderComponent
   ]
 })
 export class SharedModule { }

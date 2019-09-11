@@ -4,11 +4,9 @@ import { CommonModule } from '@angular/common';
 import { PublicRoutingModule } from './public-routing.module';
 import { LandingComponent } from './pages/landing/landing.component';
 import { SharedModule } from '../shared/shared.module';
-import { FullScreenLoaderComponent } from './../shared/full-screen-loader/full-screen-loader.component';
 @NgModule({
-  declarations: [LandingComponent, FullScreenLoaderComponent],
+  declarations: [LandingComponent],
   imports: [
-  
   CommonModule,
     PublicRoutingModule,
     SharedModule

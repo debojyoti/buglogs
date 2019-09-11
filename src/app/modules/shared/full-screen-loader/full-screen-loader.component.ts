@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FullScreenLoaderService } from './../../../services/full-screen-loader.service';
 
 @Component({
   selector: 'full-screen-loader',
@@ -7,9 +8,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FullScreenLoaderComponent implements OnInit {
 
-  constructor() { }
+  loaderProperties: any = {
+    isVisible: false,
+    loaderText: 'Loading'
+  }
 
-  ngOnInit() {
+  constructor(private fullScreenLoaderService: FullScreenLoaderService) { }
+
+  ngOnInit() { 
+    this.fullScreenLoaderService
+      .listenLoaderChanges()
+      .subscribe(updatedProperties => {
+        this.loaderProperties = updatedProperties;
+      })
   }
 
 }

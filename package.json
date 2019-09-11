@@ -12,7 +12,7 @@
   },
   "private": true,
   "dependencies": {
-    "@angular/animations": "~7.1.0",
+    "@angular/animations": "^8.2.5",
     "@angular/common": "~7.1.0",
     "@angular/compiler": "~7.1.0",
     "@angular/core": "~7.1.0",
@@ -25,6 +25,7 @@
     "core-js": "^2.5.4",
     "firebase": "^6.3.3",
     "font-awesome": "^4.7.0",
+    "ngx-toastr": "^10.2.0",
     "ngx-ui-loader": "^8.0.0",
     "rxjs": "~6.3.3",
     "shards-ui": "^2.1.2",
